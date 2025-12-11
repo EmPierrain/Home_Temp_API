@@ -1,0 +1,10 @@
+# Top-level options
+exclude = ["__pycache__", ".venv", "venv", "build", "dist", ".git", ".eggs"]
+
+[lint]
+select = ["E", "W", "F", "I", "B", "D", "S", "Q"]
+extend-ignore = ["E203", "D100", "D203", "D212", "D213", "E501", "D401", "S101"]
+
+[lint.per-file-ignores]
+"tests/**" = ["D", "S101"]
+"docs/**"  = ["D100"]
