@@ -1,4 +1,3 @@
-
 <div  align='center'>
 
 <h1><b>🏠 Home Temperature 🏠</b></h1>
@@ -9,220 +8,45 @@
 
 </div>
 
----
-
-## 💾 **ABOUT**
-
-  
-
-this is the **only**  _README template_ for your project you will ever need in your life - **trust me**
-
-  
-
-why is that?
-
-  
-
-- I'm god
-
-- my wisdom is endless
-
-- I spent thousands of hours creating this template
-
-  
-
-feel free to use it everytime and everywhere! `open source!`
-
-  
-
-<br />
-
-  
-
----
-
-  
-
 ## 🗒️ **INSTALLATION**
-
-  
-
-### local installation:
-
-  
-
-1. clone the repo
-
-  
-
-```
-
-git clone https://github.com/username/repo
-
-```
-
-  
-
-2. cd into cloned repo
-
-  
-
-```
-
-cd repo
-
-```
-
-  
-
-3. install dependencies
-
-  
-
-```
-
-pip3 install -r requirements.txt
-
-```
-
-  
-
-```
-
-yarn add react/icons
-
-```
-
-  
-
-```
-
-npm install express
-
-```
-
-  
-
-4. run the app
-
-  
-
-```
-
-python3 main.py
-
-```
-
-  
-
-```
-
-yarn dev
-
-```
-
-  
-
-```
-
-npm run start
-
-```
-
-  
-
-<br />
-
-  
 
 ### local installation via docker:
 
-  
-
 1. clone the repo
 
-  
-
 ```
-
-git clone https://github.com/username/repo
-
+git clone https://github.com/EmPierrain/Home_Temp_API
 ```
-
-  
 
 2. cd into cloned repo
 
-  
-
+```
+cd Home_Temp_API
 ```
 
-cd repo
+3. build the Home_Temp_API
 
 ```
-
-  
-
-3. build the app
-
-  
-
+docker build -t Home_Temp_API .
 ```
-
-docker build -t app .
-
-```
-
-  
 
 4. run the app
 
-  
-
 ```
-
-docker run -ti app
-
+docker run -d -p 4000:80 -v /var/log/log-gestion:/logs --name Home_Temp_API Home_Temp_API
 ```
-
-  
 
 <br/>
 
-  
-
-### run remotely via docker:
-
-  
-
-1. run the app
-
-  
-
-```
-
-docker run -ti username/dockerimage:version
-
-```
-
-  
-
-<br />
-
-  
-
 ---
-
-  
 
 ## 💻 **TECHNOLOGIES**
 
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)  ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 
 ---
 
 ## 📎 **LICENSE**
-
 
 MIT License
 
@@ -232,16 +56,12 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-  
-  <br />
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+<br />
 
 ---
 
-  
-
 ## 📌 **LINKS**
-
-  
 
 [<img alt="Github" src="https://img.shields.io/badge/EmPierrain-%23181717.svg?style=for-the-badge&logo=github&logoColor=white" />](https://github.com/EmPierrain)
