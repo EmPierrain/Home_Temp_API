@@ -1,0 +1,24 @@
+meta {
+  name: Post New Data
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url}}/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "room": "bedroom1",
+      "temp": "24.1",
+      "hydro": "26"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

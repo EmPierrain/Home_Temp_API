@@ -5,7 +5,7 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
-room_list = ["bedroom1", "bedroom2", "garage", "kitchen", "livingroom", "office"]
+room_list = ["bedroom1", "bedroom2", "celar", "garage", "kitchen", "livingroom", "office"]
 
 
 @app.route("/", methods=["POST"])
@@ -40,30 +40,32 @@ def parse_request():
 
     """
     try:
-        data = request.get_json()
+        data = request.get_json(silent=True)
+        if not data:
+            return ("", 500)
 
         # Log file path
         now = datetime.now()
-        room_name = data["room"]
+        room_name = data.get("room")
 
         if room_name not in room_list:
             return ("", 500)
 
-        filepath = "/logs/" + room_name + "/" + str(now.date()) + ".log"
+        filepath = os.path.join("/logs", room_name, f"{now.date()}.log")
+        os.makedirs(os.path.dirname(filepath), exist_ok=True)
 
         # Construct the log message
-        temp = data["temp"]
-        hydro = data["hydro"]
-        logline = str(now.time()) + ";" + temp + ";" + hydro + "\n"
+        temp = str(data.get("temp", ""))
+        hydro = str(data.get("hydro", ""))
+        logline = f"{now.time()};{temp};{hydro}\n"
 
         # Write to log file
-        logfile = open(filepath, "a")
-        logfile.write(logline)
-        logfile.close()
+        with open(filepath, "a", encoding="utf-8") as logfile:
+            logfile.write(logline)
 
-        return 200
+        return ("", 200)
     except Exception:
-        return 500
+        return ("", 500)
 
 
 @app.route("/", methods=["GET"])

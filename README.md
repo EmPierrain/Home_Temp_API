@@ -27,13 +27,13 @@ cd Home_Temp_API
 3. build the Home_Temp_API
 
 ```
-docker build -t Home_Temp_API .
+docker build -t home_temp_api .
 ```
 
 4. run the app
 
 ```
-docker run -d -p 4000:80 -v /var/log/log-gestion:/logs --name Home_Temp_API Home_Temp_API
+docker run -d -p 4000:80 --name Home_Temp_API home_temp_api
 ```
 
 <br/>
