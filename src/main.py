@@ -2,8 +2,10 @@ import os
 from datetime import datetime
 
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=False)
 
 room_list = ["bedroom1", "bedroom2", "celar", "garage", "kitchen", "livingroom", "office"]
 
